@@ -32,8 +32,8 @@
 7. Rule Editor and Dynamic Commands
 <br>Accessing Rules: Right-click a Preset device and select "Define Rules" to open the rule editor.
 <br>Rule Types: Automate MIDI messages, audio playback, external application launch, and more.
-<br>Media Buttons: Preset devices display media buttons for quick rule execution. A media button is assigned for a unique rule action. Selecting a device and hitting the space bar will wrap around the different media buttins.
-<br>Dynamic Loaded Commands: You can load MIDI, audio, or application commands using the "Load MIDI Commands" option in the menu. These commands become available for use in rules and device actions, allowing you to extend the app’s functionality without restarting or reconfiguring the application.
+<br>Media Buttons: Preset devices display media buttons for quick rule execution. A media button is assigned for a unique rule action. Selecting a device and hitting the space bar will wrap around the different media buttons.
+<br>Dynamic Loaded Commands: You can load MIDI, audio, or application commands using the "Load MIDI Commands" option in the menu. These commands become available for use in device preset rules as commandTypes, allowing you to extend the app’s functionality without restarting or reconfiguring the application.
 Dynamic commands are managed, exported and uploaded via a command editor. An example is available in the downloaded file.
 ---
 8. Logging and Monitoring
