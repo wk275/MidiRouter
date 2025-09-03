@@ -1,2 +1,65 @@
 #### MidiRouter
-MidiRouter is a Windows application for advanced MIDI and audio device management, routing, and monitoring. It features a flexible tabbed interface, allowing you to organize devices, create connections, define automation rules, and customize your MIDI/audio environment.
+
+1. Introduction
+##### MidiRouter is a Windows application for advanced MIDI and audio device management, routing, and monitoring. It features a flexible tabbed interface, allowing you to organize devices, create connections, define automation rules, and customize your MIDI/audio environment.
+
+---
+2. Application Layout
+   <br>The main window displays a tab control where each tab can contain any combination of MIDI or audio devices.
+   <br>Menu Bar: Access device management, color customization, logging, and configuration options.
+   <br>Logging Window: Monitor real-time MIDI events.
+   <br> Tab Management: Add, rename and delete tab
+---
+3. Device Management
+<br>Automatic device detection: On startup, MidiRouter scans and lists available MIDI and audio devices.
+<br>Manual Addition: Use the context menu on a tab page to add devices manually.
+<br>Device Types: Supported types include MIDI Input, MIDI Output, Audio In, Audio Out, and Preset.
+
+---
+5. Device Operations
+<br>Drag & Drop: Move devices within a tab by dragging. Snap-to-grid can be enabled for precise alignment.
+<br>Copy Device: Right-click a device and select "Copy" to duplicate it to a tab.
+<br>"Copy with dependencies" will also copy linked devices and rules.
+<br>Rename Device: Select a device and press F2 to edit its name.
+<br>Delete Device: Right-click and select "Delete" or press Delete when the device is selected.
+---
+6. Creating and Managing Links
+<br>Create Link: Click the connector panel on a device to select it for connection. Then select another device to establish a link. If you click the connection panel on many devices of the same type and then click a device connection of another type, links will be established between all selected devices.
+<br>Link Visualization: Links are drawn between devices. You can choose between straight, curved, or arrowed lines via the menu.
+<br>Link Context Menu: Right-click a link label to access options such as "Remove Connection", "Define Ports", or "Set Volume" (for audio links).
+<br>Customizing Link Appearance: Use the "Define Colors" menu to set link colors or enable random link colors for distinction.
+---
+7. Rule Editor and Dynamic Commands
+<br>Accessing Rules: Right-click a Preset device and select "Define Rules" to open the rule editor.
+<br>Rule Types: Automate MIDI messages, audio playback, external application launch, and more.
+<br>Media Buttons: Preset devices display media buttons for quick rule execution. A media button is assigned for a unique rule action. Selecting a device and hitting the space bar will wrap around the different media buttins.
+<br>Dynamic Loaded Commands: You can load MIDI, audio, or application commands using the "Load MIDI Commands" option in the menu. These commands become available for use in rules and device actions, allowing you to extend the app’s functionality without restarting or reconfiguring the application.
+Dynamic commands are managed, exported and uploaded via a command editor. An example is available in the downloaded file.
+---
+8. Logging and Monitoring
+<br>Enable Logging: Use the menu to start or stop event logging. It opens the log window to monitor MIDI and audio events in real time.
+<br>Log Filtering: Filter log messages by keyword or skip dropped messages.
+<br>Log Color Customization: Change log highlight, MIDI event, SysEx event, and audio colors via the menu.
+---
+9. Saving and Loading Configurations
+<br>Save Setup: Use "Save" or "Save As" to store your current configuration, including devices, links, rules, colors, and dynamic commands.
+---
+10. Advanced Features
+<br>Snap to Grid: Enable or disable grid snapping for device placement from the menu.
+<br>External App Integration: Rules can launch or stop external applications as part of automation.
+<br>Color Customization: Set custom colors for devices, links, and logs for improved clarity.
+---
+11. Tips and Best Practices
+<br>Use tooltips for quick device and rule information. Toggle tooltips from the menu.
+<br>Use context menus for fast access to device and link actions.
+<br>Regularly save your configuration to prevent data loss.
+<br>Use the log window to diagnose issues and monitor system activity.
+---
+12. Troubleshooting
+<br>Device Not Detected: Use "Refresh MIDI State" to rescan for devices.
+<br>Connection or Rule Issues: Check the log window for error messages and details.
+<br>Performance: If the application becomes slow or unresponsive, disable logging.
+---
+14. Support
+For further assistance, consult the official documentation or log an issue on git hub
+---
