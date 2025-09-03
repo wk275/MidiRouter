@@ -1,5 +1,8 @@
-#### MidiRouter
 
+![](https://img.shields.io/badge/release-v5.15.01.14-blue)                 
+![](https://img.shields.io/badge/windows-yellow)
+
+## MidiRouter
 1. Introduction
 ##### MidiRouter is a Windows application for advanced MIDI and audio device management, routing, and monitoring. It features a flexible tabbed interface, allowing you to organize devices, create connections, define automation rules, and customize your MIDI/audio environment.
 
@@ -58,7 +61,7 @@ Dynamic commands are managed, exported and uploaded via a command editor. An exa
 12. Troubleshooting
 <br>Device Not Detected: Use "Refresh MIDI State" to rescan for devices.
 <br>Connection or Rule Issues: Check the log window for error messages and details.
-<br>Performance: If the application becomes slow or unresponsive, disable logging.
+<br>Performance: If the application becomes slow or unresponsive, disable logging. You are probably logging a lot of midi messages. 
 ---
 14. Support
 For further assistance, consult the official documentation or log an issue on git hub
