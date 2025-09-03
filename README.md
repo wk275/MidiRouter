@@ -63,3 +63,8 @@ Dynamic commands are managed, exported and uploaded via a command editor. An exa
 14. Support
 For further assistance, consult the official documentation or log an issue on git hub
 ---
+
+## Installation
+Goto the release section under About in the github main window. 
+Goto assets and click on MidiRouter 5.15.0.14.zip.
+This will download the app binaries and a windows setup command to install the application.
