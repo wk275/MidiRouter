@@ -1,5 +1,5 @@
 
-![](https://img.shields.io/badge/release-v5.15.01.14-blue)                 
+![](https://img.shields.io/badge/release-v6.1.1.2-blue)                 
 ![](https://img.shields.io/badge/windows-yellow)
 
 ## MidiRouter
