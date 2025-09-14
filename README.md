@@ -108,5 +108,5 @@ Logging reports changes made by the Logic to a Midi event.
 
 ## Installation
 Goto the release section under About in the github main window. 
-Goto assets and click on MidiRouter 5.15.0.14.zip.
+Goto assets and click on MidiRouter 6.1.1.2.zip.
 This will download the app binaries and a windows setup command to install the application.
