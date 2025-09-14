@@ -67,6 +67,45 @@ Dynamic commands are managed, exported and uploaded via a command editor. An exa
 For further assistance, consult the official documentation or log an issue on git hub
 ---
 
+RELEASE 6.1.1.2
+---------------
+Release change log:
+
+#Error.MidiLink.MouseClick.MouseButtons.Right did not take into account the specific tabpage
+
+#Enhancement: Added CC88 (High Resolution Velocity Prefix)
+
+#Enhancement: Added Track info & name when playing "exported Musescore V4.Mid files"
+
+#Enhancement: Added "Logic" as a native command type to the "Preset MidiRules" which modifies MIDI events in real time when playing Midi files or executing MidiEvents from the Preset. 
+
+!! Logic will only be executed for Rules executed in the same Media button Block !!
+
+E.G. When configuing rules for a Preset enter following parameters
+
+| Media  Button | Command Type | Command | Midi Channels |  Out Ports | Delay |
+|-----------------|-------------------|------------|------------------|------------|--------|
+| Load | Logic | if TrackName contains Piano then {Channel = 15} else {Channel = 3}<BR> if NoteOn && Channel == 13  then {Channel = 10} |  | All | | 
+|Load	|My Midi 	  |TestV2.mid	| All | All	|  |
+
+Use <CTRL+ENTER> to create a new line in the Logic  
+
+Do not forget to setup Midi as a dynamic loaded command type
+> File > Load Dynamic Commands will open a Command Form
+Enter
+
+| Target | Category | Style | CommandType | Command |
+|--------|------------|------|------------------|-------------|
+| My Midi | | | Midi | "C:\Users\willy\Documenten Willy\Guitar - Keyboard\Musescore\Partituren\Musescore4" |
+> Close
+
+After defining the Dynamic Command Type, "My Midi" will be available in the Preset Rule configuration. 
+When entering the cell "Command" a popup shows the filles in the dir. Choose a .mid file, fill in other parms and close.
+Back on the main page focus the preset just defined and hit the space bar. It will start playing the midi file and applies the logic.
+Hitting the space bar a second time will stop the midi playback.
+
+Logging reports changes made by the Logic to a Midi event.
+
 ## Installation
 Goto the release section under About in the github main window. 
 Goto assets and click on MidiRouter 5.15.0.14.zip.
