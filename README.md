@@ -1,21 +1,38 @@
 
-![](https://img.shields.io/badge/release-v6.1.1.6-blue)                 
+![](https://img.shields.io/badge/release-v6.1.1.8-blue)                 
 ![](https://img.shields.io/badge/windows-yellow)
 
 ## MidiRouter
 1. Introduction
 ##### MidiRouter is a Windows application for MIDI and audio device management, routing, and monitoring. It features a flexible tabbed interface, allowing you to organize devices, create connections, define automation rules, and customize your MIDI/audio environment.
 
-##### MIDI Channel Assignment is missing in MuseScore 4. I use MidiRouter to get the instrument/Track MetaData from an exported Musescore4 .mid file and apply Logic at run time to change the Midi Channels
-E.G.
-Rule configuraton
+2. Release 6.1.1.2+
+##### MIDI Channel Assignment is missing in MuseScore 4. I use MidiRouter to get the Instrument/Track MetaData from an exported Musescore4 .mid file and apply Logic at run time to change the Midi Channels
+As from release 6.1.1.2+ Track- and Instrument info are available as fields in a Logic Condition block. Keep in mind that logic will only be executed for Rules executed in the same Media button Block!
+
+E.G. When configuing rules for a Preset enter following parameters
 
 | Media  Button | Command Type | Command | Midi Channels |  Out Ports | Delay |
 |-----------------|-------------------|------------|------------------|------------|--------|
-| Load | Logic | if TrackName contains Piano then {Channel = 15} <BR> if TrackName Contains Guitar then {Channel = 10} |  | All | | 
-| Load | My Midi |TestV2.mid	| All | All	|  |
+|Load | Logic | if TrackName contains Piano \|\| Instrument == GrandPiano then {Channel = 1} else {Channel = 3}<BR> if NoteOn && Channel == 13  then {Channel = 10} |  | All | | 
+|Load	|My Midi 	  |TestV2.mid	| All | All	|  |
 
+Use <CTRL+ENTER> to create a new line in the Logic. Use ENTER to accept if statement.
 
+Do not forget to setup Midi as a dynamic loaded command type
+> File > Load Dynamic Commands will open a Command Form
+Enter
+
+| Target | Category | Style | CommandType | Command |
+|--------|------------|------|------------------|-------------|
+| My Midi |must be empty |Must be empty | Midi | "C:\Users\willy\Documenten Willy\Guitar - Keyboard\Musescore\Partituren\Musescore4" (Enter the target directory surrounded by quotes) |
+> Close
+
+After defining the Dynamic Command Type, "My Midi" will be available in the Preset Rule configuration. 
+When entering the cell "Command" a popup shows the filles in the target dir defined above. Choose a .mid file and fill in other parms and close.
+Back on the main page focus the preset just defined and hit the space bar. It will start playing the midi file and applies the logic.
+Hitting the space bar a second time will stop the midi playback. Except if you defined multiple media buttons. Then you need to use the command type Midi-End to stop playback.
+Logging reports the changes made by the Logic to a Midi event.
 
 ---
 2. Application Layout
@@ -78,46 +95,7 @@ Dynamic commands are managed, exported and uploaded via a command editor. An exa
 For further assistance, consult the official documentation or log an issue on git hub
 ---
 
-RELEASE 6.1.1.2
----------------
-Release change log:
-
-#Error.MidiLink.MouseClick.MouseButtons.Right did not take into account the specific tabpage
-
-#Enhancement: Added CC88 (High Resolution Velocity Prefix)
-
-#Enhancement: Added Track info & name when playing "exported Musescore V4.Mid files"
-
-#Enhancement: Added "Logic" as a native command type to the "Preset MidiRules" which modifies MIDI events in real time when playing Midi files or executing MidiEvents from the Preset. 
-
-!! Logic will only be executed for Rules executed in the same Media button Block !!
-
-E.G. When configuing rules for a Preset enter following parameters
-
-| Media  Button | Command Type | Command | Midi Channels |  Out Ports | Delay |
-|-----------------|-------------------|------------|------------------|------------|--------|
-| Load | Logic | if TrackName contains Piano then {Channel = 15} else {Channel = 3}<BR> if NoteOn && Channel == 13  then {Channel = 10} |  | All | | 
-|Load	|My Midi 	  |TestV2.mid	| All | All	|  |
-
-Use <CTRL+ENTER> to create a new line in the Logic  
-
-Do not forget to setup Midi as a dynamic loaded command type
-> File > Load Dynamic Commands will open a Command Form
-Enter
-
-| Target | Category | Style | CommandType | Command |
-|--------|------------|------|------------------|-------------|
-| My Midi | | | Midi | "C:\Users\willy\Documenten Willy\Guitar - Keyboard\Musescore\Partituren\Musescore4" |
-> Close
-
-After defining the Dynamic Command Type, "My Midi" will be available in the Preset Rule configuration. 
-When entering the cell "Command" a popup shows the filles in the dir. Choose a .mid file, fill in other parms and close.
-Back on the main page focus the preset just defined and hit the space bar. It will start playing the midi file and applies the logic.
-Hitting the space bar a second time will stop the midi playback.
-
-Logging reports changes made by the Logic to a Midi event.
-
 ## Installation
 Goto the release section under About in the github main window. 
-Goto assets and click on MidiRouter 6.1.1.2.zip.
-This will download the app binaries and a windows setup command to install the application.
+Goto assets and click on the latest reslease.
+Download the app binaries and a windows setup command to install the application.
