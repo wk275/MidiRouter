@@ -6,7 +6,7 @@
 1. Introduction
 ##### MidiRouter is a Windows application for MIDI and audio device management, routing, and monitoring. It features a flexible tabbed interface, allowing you to organize devices, create connections, define automation rules, and customize your MIDI/audio environment.
 
-2. Release 6.1.1.2+
+Release 6.1.1.2+
 ##### MIDI Channel Assignment is missing in MuseScore 4. I use MidiRouter to get the Instrument/Track MetaData from an exported Musescore4 .mid file and apply Logic at run time to change the Midi Channels
 As from release 6.1.1.2+ Track- and Instrument info are available as fields in a Logic Condition block. Keep in mind that logic will only be executed for Rules executed in the same Media button Block!
 
