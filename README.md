@@ -21,7 +21,7 @@ E.G. When configuing rules for a Preset enter following parameters
 
 Use <CTRL+ENTER> to create a new line in the Logic. Use ENTER to accept if statement.
 
-Do not forget to setup Midi as a dynamic loaded command type
+Do not forget to setup 'My Midi' as a dynamic loaded command type
 > File > Load Dynamic Commands will open a Command Form
 Enter
 
