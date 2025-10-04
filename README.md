@@ -33,7 +33,7 @@ Enter
 After defining the Dynamic Command Type, "My Midi" will be available in the Preset Rule configuration. 
 When entering the cell "Command" a popup shows the filles in the target dir defined above. Choose a .mid file and fill in other parms and close.
 Back on the main page focus the preset just defined and hit the space bar. It will start playing the midi file and applies the logic.
-Hitting the space bar a second time will stop the midi playback. Except if you defined multiple media buttons. Then you need to use the command type Midi-End to stop playback.
+Hitting the space bar a second time will stop the midi playback. Except if you defined multiple media buttons. Then you need to use the command type Midi-Stop to stop playback.
 Logging reports the changes made by the Logic to a Midi event.
 
 ---
