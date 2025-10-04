@@ -67,7 +67,7 @@ Logging reports the changes made by the Logic to a Midi event.
 <br>Rule Types: Automate MIDI messages, audio playback, external application launch, and more.
 <br>Media Buttons: Preset devices display media buttons for quick rule execution. A media button is assigned for a unique rule action. Selecting a device and hitting the space bar will wrap around the different media buttons.
 <br>Dynamic Loaded Commands: You can define recurring commands, styles, app directory, midi directory, audio directory, etc for command types ("SysEx", "CVP-Tempo", "MSB", "LSB", "PC", "CC", "MSB-LSB-PC", "NoteOn", "Logic", "Midi", "Audio", "App") using the "Load MIDI Commands" option in the menu. These commands become available for use in device preset rules as RuleCommandTypes, allowing you to extend the app’s functionality.
-Dynamic commands are managed, exported and uploaded via a command editor. An example MidiRouterCommands.csv is available as part of the zip downloaded file.
+Dynamic commands are managed, exported and uploaded via a command editor. An example MidiRouterCommands.csv is available as part of the downloaded zip file.
 ---
 8. Logging and Monitoring
 <br>Enable Logging: Use the menu to start or stop event logging. It opens the log window to monitor MIDI and audio events in real time. Info about logic applied to an event is shown.
