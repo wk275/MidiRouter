@@ -14,8 +14,10 @@ E.G. When configuing rules for a Preset enter following parameters
 
 | Media  Button | Command Type | Command | Midi Channels |  Out Ports | Delay |
 |-----------------|-------------------|------------|------------------|------------|--------|
-|Load | Logic | if TrackName contains Piano \|\| Instrument == GrandPiano then {Channel = 1} else {Channel = 3}<BR> if NoteOn && Channel == 13  then {Channel = 10} |  | All | | 
+|Load | Logic |if Channel == 2 then {Channel = 14}<BR> (Make sure that Channel 2 is not used before assigning a new instrument to a channel) <BR>if Instrument contains Harp then {Channel = 2} <BR>if Channel == 3 then {Channel = 14}<BR> Make sure Channel 3 is not used)<BR>if Instrument contains Flute then {Channel =3} |  | All | | 
 |Load	|My Midi 	  |TestV2.mid	| All | All	|  |
+
+
 
 Use <CTRL+ENTER> to create a new line in the Logic. Use ENTER to accept if statement.
 
