@@ -101,3 +101,4 @@ For further assistance, consult the official documentation or log an issue on gi
 Goto the release section under About in the github main window. 
 Goto assets and click on the latest reslease.
 Download the app binaries and a windows setup command to install the application.
+If you install a new version please delete the previous version first via windows delete installed APPs. 
