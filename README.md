@@ -66,16 +66,16 @@ Logging reports the changes made by the Logic to a Midi event.
 <br>Accessing Rules: Right-click a Preset device and select "Define Rules" to open the rule editor.
 <br>Rule Types: Automate MIDI messages, audio playback, external application launch, and more.
 <br>Media Buttons: Preset devices display media buttons for quick rule execution. A media button is assigned for a unique rule action. Selecting a device and hitting the space bar will wrap around the different media buttons.
-<br>Dynamic Loaded Commands: You can load MIDI, audio, or application commands using the "Load MIDI Commands" option in the menu. These commands become available for use in device preset rules as commandTypes, allowing you to extend the app’s functionality without restarting or reconfiguring the application.
-Dynamic commands are managed, exported and uploaded via a command editor. An example is available in the downloaded file.
+<br>Dynamic Loaded Commands: You can define recurring commands, styles, app directory, midi directory, audio directory, etc for command types ("SysEx", "CVP-Tempo", "MSB", "LSB", "PC", "CC", "MSB-LSB-PC", "NoteOn", "Logic", "Midi", "Audio", "App") using the "Load MIDI Commands" option in the menu. These commands become available for use in device preset rules as RuleCommandTypes, allowing you to extend the app’s functionality.
+Dynamic commands are managed, exported and uploaded via a command editor. An example MidiRouterCommands.csv is available as part of the zip downloaded file.
 ---
 8. Logging and Monitoring
-<br>Enable Logging: Use the menu to start or stop event logging. It opens the log window to monitor MIDI and audio events in real time.
+<br>Enable Logging: Use the menu to start or stop event logging. It opens the log window to monitor MIDI and audio events in real time. Info about logic applied to an event is shown.
 <br>Log Filtering: Filter log messages by keyword or skip dropped messages.
 <br>Log Color Customization: Change log highlight, MIDI event, SysEx event, and audio colors via the menu.
 ---
 9. Saving and Loading Configurations
-<br>Save Setup: Use "Save" or "Save As" to store your current configuration, including devices, links, rules, colors, and dynamic commands.
+<br>Save Setup: Use "Save" or <CTRL+s> or "Save As" to store your current configuration, including devices, links, rules, colors, dynamic commands, etc.
 ---
 10. Advanced Features
 <br>Snap to Grid: Enable or disable grid snapping for device placement from the menu.
@@ -89,12 +89,12 @@ Dynamic commands are managed, exported and uploaded via a command editor. An exa
 <br>Use the log window to diagnose issues and monitor system activity.
 ---
 12. Troubleshooting
-<br>Device Not Detected: Use "Refresh MIDI State" to rescan for devices.
+<br>Device Not Detected (device grayed out): Attach your device and use "Refresh MIDI State" to rescan devices.
 <br>Connection or Rule Issues: Check the log window for error messages and details.
 <br>Performance: If the application becomes slow or unresponsive, disable logging. You are probably logging a lot of midi messages. 
 ---
 14. Support
-For further assistance, consult the official documentation or log an issue on git hub
+For further assistance, consult the official documentation or log an issue on git hub.
 ---
 
 ## Installation
